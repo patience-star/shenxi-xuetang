@@ -1,5 +1,7 @@
 # 深析学堂 · 深度学习交互学习站
 
+**在线访问：<https://patience-star.github.io/shenxi-xuetang/>**（GitHub Pages，电脑、手机都能打开）
+
 一个纯静态的深度学习教学网站：从张量、梯度、感知机讲起，一路到 CNN、RNN、Transformer 和生成模型。
 
 - **13 课，5 个阶段**：预备知识（张量与 PyTorch、梯度下降、感知机、反向传播）→ 神经网络基础（多层感知机、训练技巧）→ 卷积网络（CNN 与 LeNet、ResNet）→ 序列模型（RNN、LSTM 与 GRU、Transformer）→ 生成模型（VAE、GAN）。
@@ -129,7 +131,15 @@ python tools/run.py all               # 运行全部（ResNet 最久）
 
 ## 部署到网上
 
-纯静态网站，把整个目录（可以不带 `pytorch/data/` 里的 MNIST、CIFAR 原始数据，但要保留 `tang5.txt`）上传到任意静态托管即可：GitHub Pages、Gitee Pages、Netlify、Vercel、阿里云 OSS、腾讯云 COS 等。学习进度保存在每位学习者自己浏览器的 localStorage 里，不需要后端。进度结构有大改动时，把 `config.js` 的 `storageKey` 改个版本号即可。
+已部署在 GitHub Pages：仓库 [patience-star/shenxi-xuetang](https://github.com/patience-star/shenxi-xuetang)，从 `main` 分支根目录发布（根目录的 `.nojekyll` 让 GitHub 原样提供文件）。**修改后先在本地打开站点自检确认全部通过，再提交并推送**，一两分钟后线上自动更新：
+
+```bash
+git add -A
+git commit -m "说明这次改了什么"
+git push
+```
+
+`.gitignore` 已排除 MNIST、CIFAR 原始数据和 `.pt` 模型文件（只保留网站要用的 `tang5.txt`）。也可以把整个目录上传到 Gitee Pages、Netlify、Vercel、阿里云 OSS、腾讯云 COS 等任意静态托管。学习进度保存在每位学习者自己浏览器的 localStorage 里，不需要后端；进度结构有大改动时，把 `config.js` 的 `storageKey` 改个版本号即可。
 
 ---
 
