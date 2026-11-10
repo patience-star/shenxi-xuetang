@@ -1,0 +1,5 @@
+# 数据集由脚本自动下载（体积大），只保留整理好的唐诗语料
+pytorch/data/*
+!pytorch/data/tang5.txt
+__pycache__/
+*.pt

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>深析学堂 · 深度学习交互学习站</title>
+  <meta name="description" content="从感知机到 Transformer 的深度学习交互学习站：视频导学、互动可视化、经典案例（模型在浏览器里实时运行）、闯关练习。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a78d6'/%3E%3Cg stroke='white' stroke-width='1.6' opacity='.8'%3E%3Cpath d='M8 10L16 8M8 10L16 16M8 10L16 24M8 22L16 8M8 22L16 16M8 22L16 24M16 8L24 16M16 16L24 16M16 24L24 16'/%3E%3C/g%3E%3Cg fill='white'%3E%3Ccircle cx='8' cy='10' r='2.6'/%3E%3Ccircle cx='8' cy='22' r='2.6'/%3E%3Ccircle cx='16' cy='8' r='2.6'/%3E%3Ccircle cx='16' cy='16' r='2.6'/%3E%3Ccircle cx='16' cy='24' r='2.6'/%3E%3Ccircle cx='24' cy='16' r='2.6'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#app">跳到正文</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><g stroke="#fff" stroke-width="1.6" opacity=".8"><path d="M8 10L16 8M8 10L16 16M8 10L16 24M8 22L16 8M8 22L16 16M8 22L16 24M16 8L24 16M16 16L24 16M16 24L24 16"/></g><g fill="#fff"><circle cx="8" cy="10" r="2.6"/><circle cx="8" cy="22" r="2.6"/><circle cx="16" cy="8" r="2.6"/><circle cx="16" cy="16" r="2.6"/><circle cx="16" cy="24" r="2.6"/><circle cx="24" cy="16" r="2.6"/></g></svg>
+        <span id="brand-name">深析学堂</span>
+      </a>
+      <nav id="nav" aria-label="主导航"></nav>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"><p class="loading">正在加载…</p></main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>案例模型均在本机用 PyTorch 训练后导出，在你的浏览器里运行。</span>
+      <span>视频版权归原作者所有，经 B 站官方播放器嵌入。</span>
+      <a href="#/selftest">站点自检</a>
+    </div>
+  </footer>
+
+  <!-- 第三方库（已本地化） -->
+  <script src="vendor/marked.umd.min.js"></script>
+  <!-- 配置与引擎（课程文件由 config.js 的列表动态加载） -->
+  <script src="config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/nn.js"></script>
+  <script src="js/selftest.js"></script>
+  <script>App.start();</script>
+</body>
+</html>
